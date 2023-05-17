@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User List</title>
+  </head>
+  <body>
+    <a href="/addUser" class="btn" >Add Product</a>
+    <h1>Product List</h1>
+    <% rows.forEach((row) => { %>
+
+      <p>ID: <%= row.id %> - Title: <%= row.title %> - Cost: <%= row.price %> - Quantity: <%= row.Quantity%>     <a href="/Update/<%= row.id %>/<%= row.Quantity%>" class="btn" >Buy</a></p>
+    
+      <a href="/delete/<%= row.id %>" class="btn" >Delete</a>
+    <% }); %>
+  </body>
+</html>
